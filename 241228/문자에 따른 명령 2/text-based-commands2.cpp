@@ -8,16 +8,16 @@ int main() {
     string str;
     cin>>str;
 
-    //동서남북 순서
-    int offset[4][2]={{1,0},{-1,0},{0,-1},{0,1}};
+    //동남서북 순서
+    int offset[4][2]={{1,0},{0,-1},{-1,0},{0,1}};
     int dir=3;
 
     for(int i=0;i<str.size();i++){
         if(str[i]=='L'){
-            dir=1;
+            dir=(dir+1)%4;
         }
         else if(str[i]=='R'){
-            dir=0;
+            dir=(dir-1)%4;
         }
         else if(str[i]=='F'){
             x+=offset[dir][0];
