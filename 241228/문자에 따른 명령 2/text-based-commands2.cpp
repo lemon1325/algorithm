@@ -14,7 +14,7 @@ int main() {
 
     for(int i=0;i<str.size();i++){
         if(str[i]=='L'){
-            dir=(dir-1)%4;
+            dir=(dir-1+4)%4;
         }
         else if(str[i]=='R'){
             dir=(dir+1)%4;
