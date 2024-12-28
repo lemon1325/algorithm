@@ -14,9 +14,9 @@ int main() {
     else if(d=='L')
         dir=2;
     else if(d=='U')
-        dir=1;
-    else if(d=='D')
         dir=3;
+    else if(d=='D')
+        dir=1;
     
     for(int i=0;i<t;i++){
         
