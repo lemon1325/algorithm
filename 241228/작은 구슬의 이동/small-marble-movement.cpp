@@ -6,15 +6,15 @@ int main() {
     int n,t,r,c;//크기, 시간, 시작위치
     char d;//방향
     cin>>n>>t>>r>>c>>d;
-    //오, 왼, 위, 아래
-    int offset[4][2]={{1,0},{0,1},{-1,0},{0,-1}};
+    //오, 위, 왼, 아래
+    int offset[4][2]={{0,1},{1,0},{0,-1},{-1,0}};
     int dir;
     if(d=='R')
         dir=0;
     else if(d=='L')
-        dir=1;
-    else if(d=='U')
         dir=2;
+    else if(d=='U')
+        dir=1;
     else if(d=='D')
         dir=3;
     
