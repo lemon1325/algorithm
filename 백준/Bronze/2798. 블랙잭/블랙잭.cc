@@ -16,21 +16,15 @@ int main() {
 		cards.push_back(num);
 	}
 
-	int sum = 0, maxSum=0;
+	int maxSum=0;
 	for (int i = 0; i < n; i++) {
-		sum += cards[i];
-		
 		for (int j = i + 1; j < n; j++) {
-			sum += cards[j];
 			for (int k = j + 1; k < n; k++) {
-				sum += cards[k];
+				int sum = cards[i]+cards[j]+cards[k];
 				if (m >= sum && maxSum < sum)
 					maxSum = sum;
-				sum -= cards[k];
 			}
-			sum -= cards[j];
 		}
-		sum -= cards[i];
 	}
 	cout << maxSum;
 	return 0;
